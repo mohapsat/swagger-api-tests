@@ -1,6 +1,8 @@
 import requests
-
+#----------------
 # Get Requests
+#----------------
+
 test_case = 'PET'
 
 get_response_pet_id = requests.get('http://petstore.swagger.io/v2/pet/42')
@@ -9,17 +11,20 @@ get_response_pet_status_pending = requests.get('http://petstore.swagger.io/v2/pe
 
 # print get_response_pet_id.status_code
 if get_response_pet_id.status_code == 200:
-    print test_case +": Pass"
+    print test_case + ": Pass"
 else:
-    print test_case +": Fail"
+    print test_case + ": Fail"
+
+
+#----------------
+# Post requests
+#----------------
 
 test_case = 'ADD PET / POST'
 
-# Post requests
-
-url='http://petstore.swagger.io/v2/pet'
+url = 'http://petstore.swagger.io/v2/pet'
 # data=''
-data= {
+data = {
   "id": 0,
   "category": {
     "id": 0,
